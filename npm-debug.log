@@ -133,3 +133,4 @@
 59 error node -v v0.10.35
 60 error npm -v 1.4.28
 61 verbose exit [ 1, true ]
+
