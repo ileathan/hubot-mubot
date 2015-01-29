@@ -54,6 +54,7 @@ Then add **hubot-mubot** to your `external-scripts.json: `
 ```
 
 To set your initial balance you need to make sure you have bitmarkd running. 
+
 Please visit #AxE @ irc.swiftirc.net for more help. Just ask for leathan.
 
 ## Starting your mubot
