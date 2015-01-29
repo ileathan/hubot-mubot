@@ -12,6 +12,10 @@ In hubot project repo, (the directory where hubot resides) run:
 
 Then add **hubot-mubot** to your `external-scripts.json`:
 
+```json
+["hubot-mubot"]
+```
+
 ## Full Instalation
 
 Download setup and install nodejs. (For trouble shooting see: [Installing node.js](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager))
@@ -26,7 +30,7 @@ yo hubot
 npm install hubot-mubot --save
 ```
 
-Then add **hubot-mubot** to your `external-scripts.json`
+Then add **hubot-mubot** to your `external-scripts.json:`
 
 ```json
 ["hubot-mubot"]
