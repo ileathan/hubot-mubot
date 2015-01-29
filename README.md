@@ -73,7 +73,27 @@ Mubot>> You have <amount> marks!
 ## Troubleshooting
 
 Q.) I get the following error `ERROR TypeError: Cannot read property '...' of undefined`
-A.) edit `src/marking.coffee` and add this line to the top: robot.brain.data.credits['...'] ?= <amount>
+A.) You need to set your initial balance, open the file `src/marking.coffee` and find the line:
+
+```
+    robot.brain.resetSaveInterval(1) 
+```
+
+Then add this line after the above line:
+
+```
+    robot.brain.data.credits['...'] ?= <amount>
+```
+
+For example, for me that part of `src/marking.coffee` looks like:
+```
+module.exports = (robot) ->
+  robot.brain.on 'loaded', ->
+    robot.brain.data.credits ?= {}
+    credits = robot.brain.data.credits or {}
+    robot.brain.resetSaveInterval(1) 
+    robot.brain.data.credits['irc://leathan@irc.swiftirc.net/'] ?= 12000
+```
 
 Q.) For further questions.
 A.) Visit #AxE @ irc.swiftirc.net
