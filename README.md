@@ -14,7 +14,7 @@ Then add **hubot-mubot** to your `external-scripts.json`:
 
 ## Full Instalation
 
-Download setup and install nodejs. (For trouble shooting see: [`https://github.com/joyent/node/wiki/installing-node.js-via-package-manager`](Installing node.js)
+Download setup and install nodejs. (For trouble shooting see: [Installing node.js](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager)
 ```bash
 apt-get install curl
 curl -sL https://deb.nodesource.com/setup | bash -
