@@ -73,6 +73,7 @@ Mubot>> You have <amount> marks!
 ## Troubleshooting
 
 Q.) I get the following error `ERROR TypeError: Cannot read property '...' of undefined`
+
 A.) You need to set your initial balance, open the file `src/marking.coffee` and find the line:
 
 ```
@@ -96,4 +97,5 @@ module.exports = (robot) ->
 ```
 
 Q.) For further questions.
+
 A.) Visit #AxE @ irc.swiftirc.net

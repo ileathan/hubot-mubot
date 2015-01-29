@@ -113,7 +113,7 @@ module.exports = (robot) ->
     # SETTING INITIAL BALANCE 
     # robot.brain.data.credits[URI] ?= 0 Uncomment this line and replace URI with your usename. 
     # For example bellow is how I set my initial balance to 12000 marks:
-    #   robot.brain.data.credits['irc://leathan@irc.swiftirc.net/'] ?= 12000
+    robot.brain.data.credits['irc://leathan@irc.swiftirc.net/'] ?= 12000
     # If I was using the slack adapter and not the irc adapter I would do:
     #   robot.brain.data.credits['https://projectbitmark.slack.com/team/leathan#this'] ?= 12000
 
