@@ -20,7 +20,7 @@ Then add **hubot-mubot** to your `external-scripts.json`:
 
 Download setup and install nodejs. (For trouble shooting see: [Installing node.js](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager))
 ```bash
-apt-get install curl
+sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup | bash -
 sudo apt-get install -y nodejs
 npm install -g hubot coffee-script yo generator-hubot
