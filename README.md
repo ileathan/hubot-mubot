@@ -20,10 +20,10 @@ apt-get install curl
 curl -sL https://deb.nodesource.com/setup | bash -
 sudo apt-get install -y nodejs
 npm install -g hubot coffee-script yo generator-hubot
-mkdir -p /path/to/mubot`
-cd /path/to/mubot`
-yo hubot`
-npm install hubot-mubot --save`
+mkdir -p /path/to/mubot
+cd /path/to/mubot
+yo hubot
+npm install hubot-mubot --save
 ```
 
 Then add **hubot-mubot** to your `external-scripts.json`
