@@ -34,11 +34,26 @@ yo hubot
 npm install hubot-mubot --save
 ```
 
-Then add **hubot-mubot** to your `external-scripts.json:`
+Then add **hubot-mubot** to your `external-scripts.json: `
 
 ```json
-["hubot-mubot"]
+  "hubot-mubot",
+  "hubot-diagnostics",
+  "hubot-help",
+  "hubot-heroku-keepalive",
+  "hubot-google-images",
+  "hubot-google-translate",
+  "hubot-pugme",
+  "hubot-maps",
+  "hubot-redis-brain",
+  "hubot-rules",
+  "hubot-shipit",
+  "hubot-youtube"
+]
+
 ```
+
+To set your initial balance you need to make sure you have bitmarkd running. Please visit #AxE @ irc.swiftirc.net for more help. Just ask for leathan.
 
 ## Starting your mubot
 
