@@ -40,7 +40,9 @@ Then add **hubot-mubot** to your `external-scripts.json:`
 ["hubot-mubot"]
 ```
 
-If during setup of your hubot you selected the irc adapter as i did then this is how you would launch your mubot.
+## Starting your mubot
+
+If during setup of your hubot you selected the irc adapter as i did then this is how you would launch your mubot:
 ```
 HUBOT_IRC_SERVER=irc.swiftirc.net HUBOT_IRC_ROOMS="#AxE" HUBOT_IRC_NICK="Mubot" HUBOT_IRC_UNFLOOD="true" bin/hubot -a irc
 ```
