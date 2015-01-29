@@ -53,9 +53,7 @@ Then add **hubot-mubot** to your `external-scripts.json: `
 
 ```
 
-To set your initial balance you need to make sure you have bitmarkd running. 
-
-Please visit #AxE @ irc.swiftirc.net for more help. Just ask for leathan.
+To set your initial balance see Troubleshooting.
 
 ## Starting your mubot
 
@@ -71,3 +69,11 @@ Alternatively you can add `export` statements in your `/.bashrc` file.
 leathan>> mubot marks
 Mubot>> You have <amount> marks!
 ```
+
+## Troubleshooting
+
+Q.) I get the following error `ERROR TypeError: Cannot read property '...' of undefined`
+A.) edit `src/marking.coffee` and add this line to the top: robot.brain.data.credits['...'] ?= <amount>
+
+Q.) For further questions.
+A.) Visit #AxE @ irc.swiftirc.net

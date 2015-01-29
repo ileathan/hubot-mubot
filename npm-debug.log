@@ -29,27 +29,27 @@
 17 silly addNameRange { name: 'patch', range: '*', hasData: false }
 18 verbose request where is /patch
 19 verbose request registry https://registry.npmjs.org/
-20 verbose request id 9bd83ed10a6e7d06
+20 verbose request id 0cd5b244def170a6
 21 verbose url raw /patch
 22 verbose url resolving [ 'https://registry.npmjs.org/', './patch' ]
 23 verbose url resolved https://registry.npmjs.org/patch
 24 verbose request where is https://registry.npmjs.org/patch
-25 info trying registry request attempt 1 at 20:26:58
+25 info trying registry request attempt 1 at 20:33:07
 26 verbose etag "C78Y65CV1KR3PEXY5VGFOGB7W"
 27 http GET https://registry.npmjs.org/patch
 28 http 304 https://registry.npmjs.org/patch
 29 silly registry.get cb [ 304,
-29 silly registry.get   { date: 'Thu, 29 Jan 2015 20:26:58 GMT',
+29 silly registry.get   { date: 'Thu, 29 Jan 2015 20:33:08 GMT',
 29 silly registry.get     server: 'Apache',
 29 silly registry.get     via: '1.1 varnish',
-29 silly registry.get     'last-modified': 'Thu, 29 Jan 2015 20:26:58 GMT',
+29 silly registry.get     'last-modified': 'Thu, 29 Jan 2015 20:33:08 GMT',
 29 silly registry.get     'cache-control': 'max-age=60',
 29 silly registry.get     etag: '"C78Y65CV1KR3PEXY5VGFOGB7W"',
 29 silly registry.get     age: '0',
-29 silly registry.get     'x-served-by': 'cache-lax1433-LAX',
-29 silly registry.get     'x-cache': 'MISS',
-29 silly registry.get     'x-cache-hits': '0',
-29 silly registry.get     'x-timer': 'S1422563218.520538,VS0,VE304',
+29 silly registry.get     'x-served-by': 'cache-sjc3126-SJC',
+29 silly registry.get     'x-cache': 'HIT',
+29 silly registry.get     'x-cache-hits': '1',
+29 silly registry.get     'x-timer': 'S1422563588.042649,VS0,VE32',
 29 silly registry.get     vary: 'Accept',
 29 silly registry.get     'content-length': '0',
 29 silly registry.get     'keep-alive': 'timeout=10, max=50',
@@ -94,20 +94,20 @@
 46 verbose url resolving [ 'https://registry.npmjs.org/', './patch' ]
 47 verbose url resolved https://registry.npmjs.org/patch
 48 verbose request where is https://registry.npmjs.org/patch
-49 info trying registry request attempt 1 at 20:26:58
+49 info trying registry request attempt 1 at 20:33:08
 50 http PUT https://registry.npmjs.org/patch
 51 http 403 https://registry.npmjs.org/patch
-52 verbose headers { date: 'Thu, 29 Jan 2015 20:26:59 GMT',
+52 verbose headers { date: 'Thu, 29 Jan 2015 20:33:08 GMT',
 52 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 52 verbose headers   'content-type': 'application/json',
 52 verbose headers   'cache-control': 'max-age=60',
 52 verbose headers   'content-length': '1632',
 52 verbose headers   'accept-ranges': 'bytes',
 52 verbose headers   via: '1.1 varnish',
-52 verbose headers   'x-served-by': 'cache-lax1421-LAX',
+52 verbose headers   'x-served-by': 'cache-sjc3129-SJC',
 52 verbose headers   'x-cache': 'MISS',
 52 verbose headers   'x-cache-hits': '0',
-52 verbose headers   'x-timer': 'S1422563219.039630,VS0,VE150',
+52 verbose headers   'x-timer': 'S1422563588.259671,VS0,VE131',
 52 verbose headers   'keep-alive': 'timeout=10, max=50',
 52 verbose headers   connection: 'Keep-Alive' }
 53 error publish Failed PUT 403
