@@ -7,7 +7,7 @@
 #   wallet must be funded
 #
 # Configuration:
-#   None
+#   
 #
 # Commands:
 #   + <times> <user> <reason>        -   Marks the specified user.
@@ -19,6 +19,13 @@
 # Author:
 #   Project Bitmark
 #
+
+
+# robot.brain.data.credits[URI] ?= 0 Uncomment this line and replace URI with your usename. 
+# For example bellow is how I set my initial balance to 12000 marks:
+#   robot.brain.data.credits['irc://leathan@irc.swiftirc.net/'] ?= 12000
+# If I was using the slack adapter and not the irc adapter I would do:
+#   robot.brain.data.credits['https://projectbitmark.slack.com/team/leathan#this'] ?= 12000
 
 
 # requires
@@ -153,8 +160,6 @@ module.exports = (robot) ->
     msg.send from_URI(URI) + ' has ' + robot.brain.data.credits[URI] + symbol
 
   robot.hear /^balance\s*$/i, (msg) ->
-    #robot.brain.data.credits['irc://leathan@irc.swiftirc.net/'] ?= 12000
-    msg.send robot.brain.data.credits['irc://leathan@irc.swiftirc.net/']
     URI = to_URI(msg.message.user.name)
     #msg.send('to URI is : ' + URI)
     #msg.send('from URI is : ' + from_URI(URI))
