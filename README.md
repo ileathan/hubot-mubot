@@ -23,6 +23,10 @@ Download setup and install nodejs. (For trouble shooting see: [Installing node.j
 sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup | bash -
 sudo apt-get install -y nodejs
+```
+
+Download, setup, and isntall hubot.
+```bash
 npm install -g hubot coffee-script yo generator-hubot
 mkdir -p /path/to/mubot
 cd /path/to/mubot
