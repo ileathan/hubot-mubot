@@ -25,7 +25,7 @@ curl -sL https://deb.nodesource.com/setup | bash -
 sudo apt-get install -y nodejs
 ```
 
-Download, setup, and isntall hubot.
+Download, setup, and isntall hubot. (I entered 'irc' as my adapter NOT the default)
 ```bash
 npm install -g hubot coffee-script yo generator-hubot
 mkdir -p /path/to/mubot
@@ -39,6 +39,12 @@ Then add **hubot-mubot** to your `external-scripts.json:`
 ```json
 ["hubot-mubot"]
 ```
+
+If during setup of your hubot you selected the irc then this is how you would launch your mubot.
+```
+HUBOT_IRC_SERVER=irc.swiftirc.net HUBOT_IRC_ROOMS="#AxE" HUBOT_IRC_NICK="Mubot" HUBOT_IRC_UNFLOOD="true" bin/hubot -a irc
+```
+Alternatively you can add `export` statements in tour `/.bashrc` file.
 
 ## Sample Interaction
 
