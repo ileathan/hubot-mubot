@@ -46,7 +46,7 @@ If during setup of your hubot you selected the irc adapter as i did then this is
 ```
 HUBOT_IRC_SERVER=irc.swiftirc.net HUBOT_IRC_ROOMS="#AxE" HUBOT_IRC_NICK="Mubot" HUBOT_IRC_UNFLOOD="true" bin/hubot -a irc
 ```
-Alternatively you can add `export` statements in tour `/.bashrc` file.
+Alternatively you can add `export` statements in your `/.bashrc` file.
 
 ## Sample Interaction
 
