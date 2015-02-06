@@ -43,7 +43,7 @@ else if process.env.HUBOT_ADAPTER is 'slack'
 else if process.env.HUBOT_ADAPTER is 'shell'
   adapter = 'shell'
 else
-  adapter = 'irc' | throw new Error('HUBOT_ADAPTER env variable is required') 
+  adapter = 'irc' or throw new Error('HUBOT_ADAPTER env variable is required') 
 
 
 # functions
