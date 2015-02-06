@@ -11,15 +11,9 @@ See [`src/mubot.coffee`](src/mubot.coffee) for full documentation.
 
 ## Quick Installation
 
-In hubot project repo, (the directory where hubot resides) run:
-
 `npm install hubot-mubot --save`
 
-Then add **hubot-mubot** to your `external-scripts.json`:
-
-```json
-["hubot-mubot"]
-```
+This must be executed from within the directory where you installed hubot. Please read the Full instalation since you should probably edit the package.json file which is in that same directory.
 
 ## Full Instalation
 
@@ -30,7 +24,7 @@ curl -sL https://deb.nodesource.com/setup | bash -
 sudo apt-get install -y nodejs
 ```
 
-Download, setup, and isntall hubot. (I entered 'irc' as my adapter NOT the default)
+Download, setup, and install hubot. (I entered 'irc' as my adapter NOT the default)
 ```bash
 npm install -g hubot coffee-script yo generator-hubot
 mkdir -p /path/to/mubot
