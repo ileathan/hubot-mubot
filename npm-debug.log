@@ -1,7 +1,7 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish', 'patch' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.35
+3 info using node@v0.10.36
 4 verbose node symlink /usr/bin/node
 5 verbose publish [ 'patch' ]
 6 verbose cache add [ 'patch', null ]
@@ -29,27 +29,27 @@
 17 silly addNameRange { name: 'patch', range: '*', hasData: false }
 18 verbose request where is /patch
 19 verbose request registry https://registry.npmjs.org/
-20 verbose request id 0cd5b244def170a6
+20 verbose request id 30835ee579a855f0
 21 verbose url raw /patch
 22 verbose url resolving [ 'https://registry.npmjs.org/', './patch' ]
 23 verbose url resolved https://registry.npmjs.org/patch
 24 verbose request where is https://registry.npmjs.org/patch
-25 info trying registry request attempt 1 at 20:33:07
-26 verbose etag "C78Y65CV1KR3PEXY5VGFOGB7W"
+25 info trying registry request attempt 1 at 20:10:49
+26 verbose etag "4JD4IDZ5SU8GBLHN3OM54IOZD"
 27 http GET https://registry.npmjs.org/patch
 28 http 304 https://registry.npmjs.org/patch
 29 silly registry.get cb [ 304,
-29 silly registry.get   { date: 'Thu, 29 Jan 2015 20:33:08 GMT',
+29 silly registry.get   { date: 'Fri, 06 Feb 2015 19:10:49 GMT',
 29 silly registry.get     server: 'Apache',
 29 silly registry.get     via: '1.1 varnish',
-29 silly registry.get     'last-modified': 'Thu, 29 Jan 2015 20:33:08 GMT',
+29 silly registry.get     'last-modified': 'Fri, 06 Feb 2015 19:10:49 GMT',
 29 silly registry.get     'cache-control': 'max-age=60',
-29 silly registry.get     etag: '"C78Y65CV1KR3PEXY5VGFOGB7W"',
+29 silly registry.get     etag: '"4JD4IDZ5SU8GBLHN3OM54IOZD"',
 29 silly registry.get     age: '0',
-29 silly registry.get     'x-served-by': 'cache-sjc3126-SJC',
+29 silly registry.get     'x-served-by': 'cache-lhr6329-LHR',
 29 silly registry.get     'x-cache': 'HIT',
 29 silly registry.get     'x-cache-hits': '1',
-29 silly registry.get     'x-timer': 'S1422563588.042649,VS0,VE32',
+29 silly registry.get     'x-timer': 'S1423249849.420109,VS0,VE374',
 29 silly registry.get     vary: 'Accept',
 29 silly registry.get     'content-length': '0',
 29 silly registry.get     'keep-alive': 'timeout=10, max=50',
@@ -94,20 +94,20 @@
 46 verbose url resolving [ 'https://registry.npmjs.org/', './patch' ]
 47 verbose url resolved https://registry.npmjs.org/patch
 48 verbose request where is https://registry.npmjs.org/patch
-49 info trying registry request attempt 1 at 20:33:08
+49 info trying registry request attempt 1 at 20:10:49
 50 http PUT https://registry.npmjs.org/patch
 51 http 403 https://registry.npmjs.org/patch
-52 verbose headers { date: 'Thu, 29 Jan 2015 20:33:08 GMT',
+52 verbose headers { date: 'Fri, 06 Feb 2015 19:10:50 GMT',
 52 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
 52 verbose headers   'content-type': 'application/json',
 52 verbose headers   'cache-control': 'max-age=60',
 52 verbose headers   'content-length': '1632',
 52 verbose headers   'accept-ranges': 'bytes',
 52 verbose headers   via: '1.1 varnish',
-52 verbose headers   'x-served-by': 'cache-sjc3129-SJC',
+52 verbose headers   'x-served-by': 'cache-lhr6325-LHR',
 52 verbose headers   'x-cache': 'MISS',
 52 verbose headers   'x-cache-hits': '0',
-52 verbose headers   'x-timer': 'S1422563588.259671,VS0,VE131',
+52 verbose headers   'x-timer': 'S1423249850.010195,VS0,VE604',
 52 verbose headers   'keep-alive': 'timeout=10, max=50',
 52 verbose headers   connection: 'Keep-Alive' }
 53 error publish Failed PUT 403
@@ -127,10 +127,9 @@
 55 error If you need help, you may report this *entire* log,
 55 error including the npm and node versions, at:
 55 error     <http://github.com/npm/npm/issues>
-56 error System Linux 3.13.0-44-generic
+56 error System Linux 2.6.32-042stab102.9
 57 error command "/usr/bin/node" "/usr/bin/npm" "publish" "patch"
-58 error cwd /home/leathan/hubot-mubot
-59 error node -v v0.10.35
+58 error cwd /home/leathan/mubot/WORK/hubot-mubot
+59 error node -v v0.10.36
 60 error npm -v 1.4.28
 61 verbose exit [ 1, true ]
-
