@@ -32,7 +32,9 @@ cd /path/to/mubot
 yo hubot
 ```
 
-*-THIS STEP IS NEEDED-* From within the directory that you ran `yo hubot` (Your `/path/to/mubot`)
+**-THIS STEP IS NEEDED-** From within the directory that you ran `yo hubot` run: (Inside your `/path/to/mubot`)
+
+`npm install hubot-mubot --save`
 
 Then add **hubot-mubot** to your `external-scripts.json: `
 
