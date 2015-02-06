@@ -20,8 +20,7 @@
     "url": "https://github.com/ileathan/hubot-mubot/issues"
   },
   "dependencies": {
-    "coffee-script": "~1.6",
-    "sqlite3": "^3.0.4"
+    "coffee-script": "~1.6"
   },
   "devDependencies": {
     "mocha": "*",
