@@ -23,7 +23,7 @@
 
 # requires
 exec = require('child_process').exec;
-sqlite3 = require('sqlite3').verbose();
+# sqlite3 = require('sqlite3').verbose();
 
 
 # init
