@@ -1,7 +1,8 @@
 # Mubot, A Marking U Bot.
 
-### Status
+### Status // Version
 [![Build Status](https://travis-ci.org/ileathan/hubot-mubot.svg)](https://travis-ci.org/ileathan/hubot-mubot)
+[![npm version](https://badge.fury.io/js/hubot-mubot.svg)](http://badge.fury.io/js/hubot-mubot)
 
 ### Chat
 [![Join the chat at https://gitter.im/ileathan/hubot-mubot](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ileathan/hubot-mubot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
