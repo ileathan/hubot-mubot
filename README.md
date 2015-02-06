@@ -33,7 +33,9 @@ yo hubot
 ```
 
 **-THIS STEP IS NEEDED-** From within the directory that you ran `yo hubot` run: (Inside your `/path/to/mubot`)
-`npm install hubot-mubot --save`
+```bash
+npm install hubot-mubot --save
+````
 
 Then edit your `external-scripts.json` file and add **hubot-mubot**. Afterwords my file looks like this.
 
