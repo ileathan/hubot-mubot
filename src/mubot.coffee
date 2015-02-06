@@ -27,7 +27,7 @@ exec = require('child_process').exec;
 
 
 # init
-db = new sqlite3.Database('marks');
+# db = new sqlite3.Database('marks');
 
 credits  = {} # simple key value store or URI / balance for now
 symbol   = '₥'
