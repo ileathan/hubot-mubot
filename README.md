@@ -2,6 +2,9 @@
 
 [![Join the chat at https://gitter.im/ileathan/hubot-mubot](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ileathan/hubot-mubot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+### Status
+[![Build Status](https://travis-ci.org/ileathan/hubot-mubot.svg)](https://travis-ci.org/ileathan/hubot-mubot)
+
 Mubot, A Marking U Bot.
 
 See [`src/mubot.coffee`](src/mubot.coffee) for full documentation.
