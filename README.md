@@ -41,6 +41,7 @@ yo hubot
 Then edit your `external-scripts.json` file and add **hubot-mubot**. Afterwords my file looks like this.
 
 ```json
+[
   "hubot-mubot",
   "hubot-diagnostics",
   "hubot-help",
