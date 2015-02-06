@@ -18,7 +18,6 @@ This must be executed from within the directory where you installed hubot. Pleas
 ## Full Instalation
 
 If you do not already have nodejs installed do that now like so: (For trouble shooting see: [Installing node.js](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager))
-###Code
 ```bash
 sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup | bash -
@@ -26,7 +25,6 @@ sudo apt-get install -y nodejs
 ```
 
 If you do not already have hubot installed do that now like so: (I entered 'irc' as my adapter NOT the default)
-###Code
 ```bash
 npm install -g hubot coffee-script yo generator-hubot
 mkdir -p /path/to/mubot
@@ -35,7 +33,6 @@ yo hubot
 ```
 
 **-THIS STEP IS NEEDED-** From within the directory that you ran `yo hubot` run: (Inside your `/path/to/mubot`)
-###Code
 `npm install hubot-mubot --save`
 
 Then edit your `external-scripts.json` file and add **hubot-mubot**. Afterwords my file looks like this.
