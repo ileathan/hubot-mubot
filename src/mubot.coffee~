@@ -77,11 +77,22 @@ deposit_marks = (msg, URI, amount, robot) ->
   msg.send amount + symbol + ' to ' + from_URI(URI)
 
 transfer_marks = (msg, URI, amount, robot) ->
+  why_context = msg.match[3] or msg.match[2]
+  if !why_context?
+    console.log "NOT WHY NOT WHY NOT WHY"
+    console.log "NOT WHY NOT WHY NOT WHY"
+    console.log "NOT WHY NOT WHY NOT WHY"
+  if why_context is undefined
+    console.log "11111111NOT WHY NOT WHY NOT WHY"
+    console.log "11111111111NOT WHY NOT WHY NOT WHY"
+    console.log "1111111111NOT WHY NOT WHY NOT WHY"
+  if !why_context? or why_context is from_URI(URI)
+    why_context = "N/A"
   if robot.brain.data.marks[to_URI(msg.message.user.name)] >= parseFloat(amount)
     robot.brain.data.marks[URI] ?= 0
     robot.brain.data.marks[URI] += parseFloat(amount)
     robot.brain.data.marks[to_URI(msg.message.user.name)] -= parseFloat(amount)
-    msg.send msg.message.user.name + ' has marked ' + from_URI(URI) + ' ' + amount + symbol + '. ( ' + msg.match[2] + ' )'
+    msg.send msg.message.user.name + ' has marked ' + from_URI(URI) + ' ' + amount + symbol + '. ( ' + why_context + ' )'
   else
     msg.send 'Sorry, no one has marked you yet. Try the deposit command.'
 
@@ -126,15 +137,18 @@ module.exports = (robot) ->
       save(robot)
         
   # TRANSFER
-  robot.hear /^(mark)\s+@?([\w\S]+)\s*(\d+)\s*$/i, (msg) ->
-    transfer_marks(msg, to_URI(msg.match[2]), msg.match[3], robot)
+  robot.hear /^mark @?([\w\S]+) (\d+)$/i, (msg) ->
+    transfer_marks(msg, to_URI(msg.match[1]), msg.match[3], robot)
     save(robot)
 
-  robot.hear /^(mark)\s+@?([\w\S]+)\s*$/i, (msg) ->
-    transfer_marks(msg, to_URI(msg.match[2]), 1, robot)
+  robot.hear /^mark @?([\w\S]+)$/i, (msg) ->
+    transfer_marks(msg, to_URI(msg.match[1]), 1, robot)
     save(robot)
 
-  robot.hear /^\+(\d+)\s@?([\w\S]+)$/i, (msg) ->
+  robot.hear /^\+(\d+)\s@?([\w\S]+) ?(.*)?$/i, (msg) ->
+    console.log "MESSAGE DOT MATCH IS"
+    console.log "MESSAGE DOT MATCH IS"
+    console.log msg.match[3]
     plus = msg.match[1]
     if plus <= 25
       transfer_marks(msg, to_URI(msg.match[2]), plus, robot)
@@ -145,6 +159,7 @@ module.exports = (robot) ->
   robot.hear /^\+(\d+)$/i, (msg) ->
     plus = msg.match[1]
     if plus <= 25
+      console.log last
       transfer_marks(msg, to_URI(last), plus, robot)
     else
       msg.send 'Max is +25'
