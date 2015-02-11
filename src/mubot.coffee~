@@ -167,8 +167,7 @@ module.exports = (robot) ->
 
   # WEB
   
-  
-  robot.router.get "/#{robot.name}/marks", (req, res) ->
+  robot.router.get "/marks", (req, res) ->
     res.end JSON.stringify(robot.brain.data.credits)
     
   # LISTEN
