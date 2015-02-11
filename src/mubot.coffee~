@@ -71,17 +71,17 @@ from_URI = ( URI ) ->
 
 #   Decommisioned
 #   deposit  <user> <amount> <secret> - deposit amount using shared secret
-deposit_credits = (msg, URI, amount, robot) ->
+deposit_marks = (msg, URI, amount, robot) ->
   robot.brain.data.credits[URI] ?= 0
   robot.brain.data.credits[URI] += parseFloat(amount)
   msg.send amount + symbol + ' to ' + from_URI(URI)
 
-transfer_credits = (msg, URI, amount, robot) ->
+transfer_marks = (msg, URI, amount, robot) ->
   if robot.brain.data.credits[to_URI(msg.message.user.name)] >= parseFloat(amount)
     robot.brain.data.credits[URI] ?= 0
     robot.brain.data.credits[URI] += parseFloat(amount)
     robot.brain.data.credits[to_URI(msg.message.user.name)] -= parseFloat(amount)
-    msg.send amount + symbol + ' has been awarded to ' + from_URI(URI)
+    msg.send msg.message.user.name + ' has marked ' + from_URI(URI) + ' ' + amount + ' times ( ' + amount + symbol + ' ).'
   else
     msg.send 'sorry, not enough funds'
 
