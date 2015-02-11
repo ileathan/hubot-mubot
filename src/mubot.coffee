@@ -81,7 +81,7 @@ transfer_marks = (msg, URI, amount, robot) ->
     robot.brain.data.marks[URI] ?= 0
     robot.brain.data.marks[URI] += parseFloat(amount)
     robot.brain.data.marks[to_URI(msg.message.user.name)] -= parseFloat(amount)
-    msg.send msg.message.user.name + ' has marked ' + from_URI(URI) + ' ' + amount + ' times ( ' + amount + symbol + ' ).'
+    msg.send msg.message.user.name + ' has marked ' + from_URI(URI) + ' ' + amount + symbol + ' time(s). ( ' + msg.match[2] + ' ).'
   else
     msg.send 'sorry, not enough funds'
 
@@ -134,7 +134,7 @@ module.exports = (robot) ->
     transfer_marks(msg, to_URI(msg.match[2]), 1, robot)
     save(robot)
 
-  robot.hear /^\+(\d+)\s*$/i, (msg) ->
+  robot.hear /^\+(\d+)\s(.*)*$/i, (msg) ->
     plus = msg.match[1]
     if plus <= 25
       transfer_marks(msg, to_URI(last), plus, robot)
