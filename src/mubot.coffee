@@ -81,9 +81,9 @@ transfer_marks = (msg, URI, amount, robot) ->
     robot.brain.data.marks[URI] ?= 0
     robot.brain.data.marks[URI] += parseFloat(amount)
     robot.brain.data.marks[to_URI(msg.message.user.name)] -= parseFloat(amount)
-    msg.send msg.message.user.name + ' has marked ' + from_URI(URI) + ' ' + amount + symbol + ' time(s). ( ' + msg.match[2] + ' ).'
+    msg.send msg.message.user.name + ' has marked ' + from_URI(URI) + ' ' + amount + symbol + '. ( ' + msg.match[2] + ' )'
   else
-    msg.send 'sorry, not enough funds'
+    msg.send 'Sorry, no one has marked you yet. Try the deposit command.'
 
 
 withdraw_marks = (msg, address, amount, robot) ->
@@ -97,7 +97,7 @@ withdraw_marks = (msg, address, amount, robot) ->
       robot.brain.data.marks[to_URI(msg.message.user.name)] -= parseFloat(amount)
       msg.send stdout
   else
-    msg.send 'not enough funds'
+    msg.send 'Sorry, you have not been marked that many times yet.'
 
 
 save = (robot) ->
@@ -126,15 +126,23 @@ module.exports = (robot) ->
       save(robot)
         
   # TRANSFER
-  robot.hear /^(transfer|mark)\s+@?([\w\S]+)\s*(\d+)\s*$/i, (msg) ->
+  robot.hear /^(mark)\s+@?([\w\S]+)\s*(\d+)\s*$/i, (msg) ->
     transfer_marks(msg, to_URI(msg.match[2]), msg.match[3], robot)
     save(robot)
 
-  robot.hear /^(transfer|mark)\s+@?([\w\S]+)\s*$/i, (msg) ->
+  robot.hear /^(mark)\s+@?([\w\S]+)\s*$/i, (msg) ->
     transfer_marks(msg, to_URI(msg.match[2]), 1, robot)
     save(robot)
 
-  robot.hear /^\+(\d+)\s(.*)*$/i, (msg) ->
+  robot.hear /^\+(\d+)\s@?([\w\S]+)$/i, (msg) ->
+    plus = msg.match[1]
+    if plus <= 25
+      transfer_marks(msg, to_URI(msg.match[2]), plus, robot)
+    else
+      msg.send 'Max is +25'
+    save(robot)
+
+  robot.hear /^\+(\d+)$/i, (msg) ->
     plus = msg.match[1]
     if plus <= 25
       transfer_marks(msg, to_URI(last), plus, robot)
@@ -152,23 +160,16 @@ module.exports = (robot) ->
     
   # BALANCE
   robot.hear /^balance\s+@?([\w\S]+)\s*$/i, (msg) ->
-    #redis-brain.getData()
     URI = to_URI(msg.match[1])
-    #msg.send('to URI is : ' + URI)
-    #msg.send('from URI is : ' + from_URI(URI))
     robot.brain.data.marks[URI] ?= 0
     msg.send from_URI(URI) + ' has ' + robot.brain.data.marks[URI] + symbol
 
   robot.hear /^balance\s*$/i, (msg) ->
     URI = to_URI(msg.message.user.name)
-    #msg.send('to URI is : ' + URI)
-    #msg.send('from URI is : ' + from_URI(URI))
     robot.brain.data.marks[URI] ?= 0
-    msg.send from_URI(URI) + ' has ' + robot.brain.data.marks[URI] + symbol
+    msg.send from_URI(URI) + ' has ' + robot.brain.data.marks[URI] + symbol + '.'
 
-  # WEB
-  
-  
+  # WEB 
   robot.router.get "/#{robot.name}/marks", (req, res) ->
     res.end JSON.stringify(robot.brain.data.marks)
     
