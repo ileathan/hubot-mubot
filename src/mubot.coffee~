@@ -1,24 +1,24 @@
 # Description:
 #   A Marking U Bot.
-#
+# 
 # Dependencies:
 #   bitmarkd must be running
 #   bitmark-cli must be in path
 #   wallet must be funded
-#
+# 
 # Configuration:
 #   
-#
+# 
 # Commands:
 #   + <times> <user> <reason>        -   Marks the specified user.
 #   withdraw <address> <amount>      -   withdraw to address amount.
 #   deposit                          -   Display the your address.
 #   marks <user>                     -   balance for a user (will be depreciated soon).
 #   + <times>                        -   mark the last user with his comment as the reason.
-#
+# 
 # Author:
 #   Project Bitmark
-#
+# 
 
 
 # requires
