@@ -5,16 +5,16 @@
 #   bitmarkd must be running
 #   bitmark-cli must be in path
 #   wallet must be funded
-## 
+# 
 # 
 # Configuration:
 #   
 # 
 # Commands:
-#   + <times> <user> <reason>        -   Marks the specified user.
+#   + <times> <user> [ <reason> ]        -   Marks the specified user.
 #   withdraw <address> <amount>      -   withdraw to address amount.
-#   deposit                          -   Display the your address.
-#   marks <user>                     -   balance for a user (will be depreciated soon).
+#   deposit                          -   Display your address.
+#   marks [ <user> ]                 -   Marking statistics for specified user or of onself.
 #   + <times>                        -   mark the last user with his comment as the reason.
 # 
 # Author:

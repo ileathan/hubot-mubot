@@ -11,10 +11,10 @@
 #   
 # 
 # Commands:
-#   + <times> <user> <reason>        -   Marks the specified user.
+#   + <times> <user> [ <reason> ]        -   Marks the specified user.
 #   withdraw <address> <amount>      -   withdraw to address amount.
-#   deposit                          -   Display the your address.
-#   marks <user>                     -   balance for a user (will be depreciated soon).
+#   deposit                          -   Display your address.
+#   marks [ <user> ]                 -   Marking statistics for specified user or of onself.
 #   + <times>                        -   mark the last user with his comment as the reason.
 # 
 # Author:
@@ -184,4 +184,9 @@ module.exports = (robot) ->
   # LISTEN
   robot.hear /.*/i, (msg) ->
     last = msg.message.user.name
-    console.log("[" + (new Date).toLocaleTimeString() + "] " + msg.message.text)
+    # console.log("[" + (new Date).toLocaleTimeString() + "] " + msg.message.text)
+    data = JSON.stringify({
+      foo: 'bar'
+    })
+    console.log data
+    console.log JSON.strigify(data)
