@@ -139,9 +139,6 @@ module.exports = (robot) ->
     save(robot)
 
   robot.hear /^\+(\d+)\s@?([\w\S]+) ?(.*)?$/i, (msg) ->
-    console.log "MESSAGE DOT MATCH IS"
-    console.log "MESSAGE DOT MATCH IS"
-    console.log msg.match[3]
     plus = msg.match[1]
     if plus <= 25
       transfer_marks(msg, to_URI(msg.match[2]), plus, robot)
@@ -184,9 +181,14 @@ module.exports = (robot) ->
   # LISTEN
   robot.hear /.*/i, (msg) ->
     last = msg.message.user.name
+    
+    
+    
+#CreateMarking = 
+    
     # console.log("[" + (new Date).toLocaleTimeString() + "] " + msg.message.text)
-    data = JSON.stringify({
-      foo: 'bar'
-    })
-    console.log data
-    console.log JSON.strigify(data)
+    #data = JSON.stringify({
+    #  foo: 'bar'
+    #})
+    #console.log data
+    #console.log JSON.stringify(data)

@@ -184,4 +184,14 @@ module.exports = (robot) ->
   # LISTEN
   robot.hear /.*/i, (msg) ->
     last = msg.message.user.name
-    console.log("[" + (new Date).toLocaleTimeString() + "] " + msg.message.text)
+    
+    
+    
+#CreateMarking = 
+    
+    # console.log("[" + (new Date).toLocaleTimeString() + "] " + msg.message.text)
+    #data = JSON.stringify({
+    #  foo: 'bar'
+    #})
+    #console.log data
+    #console.log JSON.stringify(data)
