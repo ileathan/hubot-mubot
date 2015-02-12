@@ -164,12 +164,12 @@ module.exports = (robot) ->
     save(robot)
     
   # BALANCE
-  robot.hear /^balance\s+@?([\w\S]+)\s*$/i, (msg) ->
+  robot.hear /^marks\s+@?([\w\S]+)\s*$/i, (msg) ->
     URI = to_URI(msg.match[1])
     robot.brain.data.marks[URI] ?= 0
     msg.send from_URI(URI) + ' has ' + robot.brain.data.marks[URI] + symbol
 
-  robot.hear /^balance\s*$/i, (msg) ->
+  robot.hear /^marks\s*$/i, (msg) ->
     URI = to_URI(msg.message.user.name)
     robot.brain.data.marks[URI] ?= 0
     msg.send from_URI(URI) + ' has ' + robot.brain.data.marks[URI] + symbol + '.'
