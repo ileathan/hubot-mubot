@@ -1,0 +1,65 @@
+{
+  "name": "hubot-mubot",
+  "description": "Mubot, A Marking U Bot.",
+  "version": "0.0.11",
+  "author": {
+    "name": "Project bitmark",
+    "email": "1@bitmark.mx"
+  },
+  "license": "??",
+  "keywords": [
+    "mubot",
+    "marking",
+    "bot",
+    "hubot",
+    "hubot-scripts",
+    "bitmark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ileathan/hubot-mubot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ileathan/hubot-mubot/issues"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*",
+    "grunt-mocha-test": "~0.7.0",
+    "grunt-release": "~0.6.0",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "main": "index.coffee",
+  "scripts": {
+    "test": "cake test"
+  },
+  "gitHead": "7bcd5cef590f0c70a36ffdb5cfd150153cd0aa71",
+  "homepage": "https://github.com/ileathan/hubot-mubot",
+  "_id": "hubot-mubot@0.0.11",
+  "_shasum": "45436586af36c350d68372210c25d10c9e482659",
+  "_from": "hubot-mubot@0.0.11",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "leathan",
+    "email": "1@leathan.net"
+  },
+  "maintainers": [
+    {
+      "name": "leathan",
+      "email": "1@leathan.net"
+    }
+  ],
+  "dist": {
+    "shasum": "45436586af36c350d68372210c25d10c9e482659",
+    "tarball": "http://registry.npmjs.org/hubot-mubot/-/hubot-mubot-0.0.11.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/hubot-mubot/-/hubot-mubot-0.0.11.tgz",
+  "readme": "ERROR: No README data found!"
+}
