@@ -5,7 +5,7 @@
 #   bitmarkd must be running
 #   bitmark-cli must be in path
 #   wallet must be funded
-# 
+## 
 # 
 # Configuration:
 #   
