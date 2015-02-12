@@ -9,7 +9,7 @@
 # 
 # Configuration:
 #   
-# 
+## 
 # Commands:
 #   + <times> <user> <reason>        -   Marks the specified user.
 #   withdraw <address> <amount>      -   withdraw to address amount.
@@ -79,14 +79,6 @@ deposit_marks = (msg, URI, amount, robot) ->
 
 transfer_marks = (msg, URI, amount, robot) ->
   why_context = msg.match[3] or msg.match[2]
-  if !why_context?
-    console.log "NOT WHY NOT WHY NOT WHY"
-    console.log "NOT WHY NOT WHY NOT WHY"
-    console.log "NOT WHY NOT WHY NOT WHY"
-  if why_context is undefined
-    console.log "11111111NOT WHY NOT WHY NOT WHY"
-    console.log "11111111111NOT WHY NOT WHY NOT WHY"
-    console.log "1111111111NOT WHY NOT WHY NOT WHY"
   if !why_context? or why_context is from_URI(URI)
     why_context = "N/A"
   if robot.brain.data.marks[to_URI(msg.message.user.name)] >= parseFloat(amount)
