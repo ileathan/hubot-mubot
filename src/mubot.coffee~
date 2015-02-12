@@ -9,7 +9,7 @@
 # 
 # Configuration:
 #   
-# 
+## 
 # Commands:
 #   + <times> <user> <reason>        -   Marks the specified user.
 #   withdraw <address> <amount>      -   withdraw to address amount.
