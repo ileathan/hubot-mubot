@@ -20,7 +20,7 @@ This must be executed from within the directory where you installed hubot. Pleas
 If you do not already have nodejs installed do that now like so: (For trouble shooting see: [Installing node.js](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager))
 ```bash
 sudo apt-get install curl
-curl -sL https://deb.nodesource.com/setup | bash -
+sudo curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install -y nodejs
 ```
 
